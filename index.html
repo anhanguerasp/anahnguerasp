@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anhanguera SP</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://use.typekit.net/wbe8kkj.css">
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuIcon = document.querySelector(".menu-icon");
+      const headerLinks = document.querySelector(".header-links");
+
+      menuIcon.addEventListener("click", () => {
+        headerLinks.classList.toggle("show");
+      });
+
+      const carouselInner = document.querySelector(".carousel-inner");
+      const prevButton = document.querySelector(".prev-button");
+      const nextButton = document.querySelector(".next-button");
+      let currentSlide = 0;
+      const totalSlides = 5;
+
+      function goToSlide(slideIndex) {
+        currentSlide = slideIndex;
+        carouselInner.style.transform = `translateX(-${currentSlide * 1600}px)`;
+      }
+
+      prevButton.addEventListener("click", () => {
+        currentSlide = (currentSlide - 1 + 5) % 5;
+        goToSlide(currentSlide);
+      });
+
+      nextButton.addEventListener("click", () => {
+        currentSlide = (currentSlide + 1) % 5;
+        goToSlide(currentSlide);
+      });
+
+      setInterval(() => {
+        currentSlide = (currentSlide + 1) % 5;
+        goToSlide(currentSlide);
+      }, 5000); // Troca de imagem a cada 3 segundos
+    });
+  </script>
+
+</head>
+
+<body>
+  <div class="pre-header">
+    <button class="botao-1">Nossas Parcerias</button>
+    <button class="botao-2">Inscreva-se</button>
+  </div>
+  <div class="header">
+    <a href="./index.html"><img class="logo" src="./img/logo.svg" alt="logo Anhanguera" width="323" height="60"></a>
+    <div class="menu-icon">&#9776;</div>
+
+    <div class="header-links">
+      <a href="/index.html"><img src="./img/icone casa.png" alt="Voltar para home" width="40" height="32px"></a>
+      <a href="./graduacao">Graduação</a>
+      <a href="./eja-supletivo">EJA Supletivo</a>
+      <a href="./pos-mba">Pós e MBA</a>
+    </div>
+  </div>
+  </div>
+  <div class="carousel">
+    <div class="carousel-controls">
+      <span class="carousel-control prev-button">&#9664;</span>
+      <span class="carousel-control next-button">&#9654;</span>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-slide">
+        <img src="./img/COMEÇE SUA FACUL POR APENAS 59.png" alt="Imagem 1">
+      </div>
+      <div class="carousel-slide">
+        <img src="./img/CURSOS NAS ÁREAS DA SAÚDE E ENGENHARIA.png" alt="Imagem 2">
+      </div>
+      <div class="carousel-slide">
+        <img src="./img/ESTUDE FORMA FLEXIVEL_.png" alt="Imagem 3">
+      </div>
+      <div class="carousel-slide">
+        <img src="./img/EMPRESAS PARCEIRAS.png" alt="Imagem 4">
+      </div>
+      <div class="carousel-slide">
+        <img src="./img/EJA E ANHANGUERA DA O PLAY_.png" alt="Imagem 5">
+      </div>
+    </div>
+  </div>
+
+
+
+  <section class="section">
+    <h1>Especialidades!</h1>
+    <div class="container">
+      <div class="row">
+        <div class="column">
+          <img class="esquerda" src="./img/chapeu.png" alt="Imagem Esquerda 1">
+        </div>
+        <div class="column">
+          <h2>Graduação</h2>
+          <p>Nossos cursos de graduação são projetados para oferecer uma experiência de aprendizado desafiadora e envolvente, preparando nossos alunos para os desafios do mercado de trabalho. Com um corpo docente altamente qualificado e uma variedade de recursos, nossos cursos oferecem aos alunos as habilidades práticas e conhecimentos teóricos necessários para ter sucesso em suas carreiras.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <h2>Pós Graduação</h2>
+          <p>Nossos cursos de pós-graduação são projetados para preparar os alunos para se destacarem em suas áreas de atuação, fornecendo-lhes habilidades e conhecimentos avançados, além de uma rede de contatos que os ajudará a avançar em suas carreiras. Nossos programas são liderados por profissionais experientes e altamente qualificados, e oferecem oportunidades práticas de aprendizado que combinam teoria e prática para que os alunos possam aplicar o que aprendem na sala de aula ao mundo real.</p>
+        </div>
+        <div class="column">
+          <img class="esquerda" src="./img/curriculo.png" alt="Imagem Direita 2">
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <img class="esquerda" src="./img/cracha.png" alt="Imagem Esquerda 3">
+        </div>
+        <div class="column">
+          <h2>Cursos Livres</h2>
+          <p>Nossos cursos livres oferecem uma oportunidade única para aprender novas habilidades, aprimorar sua carreira ou se aprofundar em um hobby. Com conteúdo prático e atualizado, você poderá escolher entre uma variedade de cursos em diversas áreas, desde marketing digital até culinária. Nossos cursos são ministrados por profissionais experientes e oferecem flexibilidade para você estudar no seu próprio ritmo. Com nossos cursos livres, você pode adquirir conhecimentos valiosos para aprimorar sua vida pessoal ou profissional.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <article class="cursos-lista">
+    <h1>Conheça alguns dos nossos cursos</h1>
+    <ul>
+      <li>
+        <a href="./">
+          <img src="./img/fisioterapia.png" alt="Curso fisioterapia">
+          <h2>Fisioterapia</h2>
+          <span>R$59,00</span>
+        </a>
+      </li>
+      <li>
+        <a href="./">
+          <img src="./img/biomed.png" alt="biomed">
+          <h2>Biomedicina</h2>
+          <span>R$59,00</span>
+        </a>
+      </li>
+      <li>
+        <a href="./">
+          <img src="./img/engcivil.png" alt="engenharia civil">
+          <h2>Engenharia Civil</h2>
+          <span>R$59,00</span>
+        </a>
+      </li>
+    </ul>
+  </article>
+</body>
+
+</html>
