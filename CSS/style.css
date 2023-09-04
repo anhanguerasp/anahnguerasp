@@ -1,11 +1,7 @@
+@import url("./global.css");
 @import url("./pre-header.css");
 @import url("./header.css");
 @import url("./carrossel.css");
 @import url("./especialidades.css");
 @import url("./cursos-em-alta.css");
 @import url("./formulario.css");
-
-body {
-  margin: 0;
-  padding: 0;
-}
