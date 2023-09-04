@@ -133,11 +133,14 @@ body {
 
 @media (max-width: 1500px) {
   .header-links {
-    gap: 1.25rem;
-    flex-wrap: wrap;
+    display: none;
   }
-  .header-links > * {
-    flex-basis: calc(50% - 1.25rem);
+  #menu {
+    display: block;
+  }
+  .logo {
+    margin-bottom: 0; /* Remova a margem inferior no logo */
+    margin-left: 350px;
   }
 }
 
@@ -152,6 +155,7 @@ body {
     margin-bottom: 0; /* Remova a margem inferior no logo */
     width: 136px;
     height: 25px;
+    margin-left: 0;
   }
 
   .div-logo {

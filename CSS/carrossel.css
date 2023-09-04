@@ -26,14 +26,13 @@
 }
 @media (max-width: 400px) {
   .carousel {
-    width: 375px;
+    width: 100vw;
     height: 105.47px;
     overflow: hidden;
   }
 
   .carousel-inner {
     display: block;
-    width: 100%; /* Cada slide ocupa 100% da largura */
     transition: transform 1s ease-in-out;
     white-space: nowrap; /* Impede que os slides quebrem para a próxima linha */
   }
