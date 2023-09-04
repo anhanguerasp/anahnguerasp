@@ -6,6 +6,10 @@
   margin-bottom: 0px;
 }
 
+.margem-titulo {
+  margin-left: 20px;
+}
+
 .cursos-lista h2 {
   margin-bottom: 40px;
   font-family: "apotek-comp", sans-serif;
@@ -19,7 +23,6 @@
   display: flex;
   gap: 40px;
   max-width: 1400px;
-  margin-left: 180px;
   margin-right: auto;
   overflow-x: auto;
   list-style: none;
@@ -27,6 +30,7 @@
 
 .cursos-lista a {
   display: block;
+  color: transparent;
 }
 
 .cursos-lista img {
