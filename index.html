@@ -5,44 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anhanguera SP</title>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./CSS/style.css">
   <link rel="stylesheet" href="https://use.typekit.net/wbe8kkj.css">
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const menuIcon = document.querySelector(".menu-icon");
-      const headerLinks = document.querySelector(".header-links");
-
-      menuIcon.addEventListener("click", () => {
-        headerLinks.classList.toggle("show");
-      });
-
-      const carouselInner = document.querySelector(".carousel-inner");
-      const prevButton = document.querySelector(".prev-button");
-      const nextButton = document.querySelector(".next-button");
-      let currentSlide = 0;
-      const totalSlides = 5;
-
-      function goToSlide(slideIndex) {
-        currentSlide = slideIndex;
-        carouselInner.style.transform = `translateX(-${currentSlide * 1600}px)`;
-      }
-
-      prevButton.addEventListener("click", () => {
-        currentSlide = (currentSlide - 1 + 5) % 5;
-        goToSlide(currentSlide);
-      });
-
-      nextButton.addEventListener("click", () => {
-        currentSlide = (currentSlide + 1) % 5;
-        goToSlide(currentSlide);
-      });
-
-      setInterval(() => {
-        currentSlide = (currentSlide + 1) % 5;
-        goToSlide(currentSlide);
-      }, 5000); // Troca de imagem a cada 3 segundos
-    });
-  </script>
+  <script type="text/javascript" src="./JS/script.js"></script>
 
 </head>
 
@@ -52,22 +17,42 @@
     <button class="botao-2">Inscreva-se</button>
   </div>
   <div class="header">
-    <a href="./index.html"><img class="logo" src="./img/logo.svg" alt="logo Anhanguera" width="323" height="60"></a>
-    <div class="menu-icon">&#9776;</div>
+    <div class="div-logo">
+      <a href="./index.html"><img class="logo" src="./img/logo.svg" alt="logo Anhanguera" width="323" height="60"></a>
+    </div>
 
     <div class="header-links">
       <a href="/index.html"><img src="./img/icone casa.png" alt="Voltar para home" width="40" height="32px"></a>
       <a href="./graduacao">Graduação</a>
       <a href="./eja-supletivo">EJA Supletivo</a>
       <a href="./pos-mba">Pós e MBA</a>
+      <a href="./polos">Polos</a>
+      <a href="./Laboratorios">Laboratórios</a>
     </div>
+    <div id="menu">
+      <div id="menu-bar" onclick="menuOnClick()">
+        <div id="bar1" class="bar"></div>
+        <div id="bar2" class="bar"></div>
+        <div id="bar3" class="bar"></div>
+      </div>
+      <nav class="nav" id="nav">
+        <ul>
+          <li><a href="/index.html"><img src="./img/icone casa.png" alt="Voltar para home" width="40" height="32px"></a>
+          </li>
+          <li><a href="./graduacao">Graduação</a></li>
+          <li><a href="./eja-supletivo">EJA Supletivo</a></li>
+          <li><a href="./pos-mba">Pós e MBA</a></li>
+          <li><a href="./polos">Polos</a></li>
+          <li><a href="./Laboratorios">Laboratórios</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="menu-bg" id="menu-bg"></div>
   </div>
   </div>
+
   <div class="carousel">
-    <div class="carousel-controls">
-      <span class="carousel-control prev-button">&#9664;</span>
-      <span class="carousel-control next-button">&#9654;</span>
-    </div>
     <div class="carousel-inner">
       <div class="carousel-slide">
         <img src="./img/COMEÇE SUA FACUL POR APENAS 59.png" alt="Imagem 1">
@@ -149,6 +134,56 @@
       </li>
     </ul>
   </article>
+
+  <div class="contato container">
+    <section class="contato-dados" aria-label="Endereço">
+      <h2 class="font-1-m cor-0">Loja Online</h2>
+      <div class="contato-endereco font-2-s cor-4">
+        <p>Rua Ali Perto, 35</p>
+        <p>Rio de Janiero - RJ </p>
+        <p>Brasil - Terra - Via Láctea</p>
+      </div>
+      <address class="contato-meios font-2-s cor-4">
+        <a href="mailto:contato@bikcraft.com">contato@bikcraft.com</a>
+        <a href="mailto:assistencia@bikcraft.com">assistencia@bikcraft.com</a>
+        <a href="tel:+5521999999999">+55 21 99999-9999</a>
+      </address>
+      <div class="contato-redes">
+        <a href="./">
+          <img src="./img/redes/instagram-p.svg" alt="Instagram">
+        </a>
+        <a href="./">
+          <img src="./img/redes/facebook-p.svg" alt="Facebook">
+        </a>
+        <a href="./">
+          <img src="./img/redes/youtube-p.svg" alt="Youtube">
+        </a>
+      </div>
+    </section>
+    <section class="contato-formulario" aria-label="formulario">
+      <form class="form" action="https://api.sheetmonkey.io/form/iGoazYnXWrMbFKkPU6j5L4" method="post">
+        <div>
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome">
+        </div>
+        <div>
+          <label for="telefone">Telefone</label>
+          <input type="text" id="telefone" name="telefone" placeholder="(21) 99999-9999">
+        </div>
+        <div class="col-2">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="contato@email.com.br">
+        </div>
+        <div class="col-2">
+          <label for="mensagem">Mensagem</label>
+          <textarea rows="5" id="mensagem" name="mensagem" placeholder="O que você precisa?"></textarea>
+        </div>
+        <button class="botao col-2">Enviar Mensagem</button>
+      </form>
+    </section>
+  </div>
+
+
 </body>
 
 </html>

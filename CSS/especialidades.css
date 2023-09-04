@@ -1,0 +1,83 @@
+.section {
+  background-image: url("../img/Fundo-especialidade.png");
+  background-color: #ffffff;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: -20px;
+}
+
+h1 {
+  color: #ff7323;
+  text-transform: uppercase;
+  font-size: 48px;
+  padding-left: 180px;
+  font-family: "apotek", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 10px;
+}
+
+.section h2 {
+  color: #16375c;
+  font-size: 32px;
+}
+.section p {
+  color: #595959;
+  font-size: 20px;
+  text-align: justify;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.column {
+  flex-basis: 48%;
+  padding: 20px;
+}
+.column img {
+  max-width: 100%;
+  height: auto;
+}
+.column:nth-child(odd) {
+  order: 1;
+}
+.column:nth-child(even) {
+  order: 2;
+}
+
+.esquerda {
+  margin-left: 150px;
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 34px;
+    padding-left: 20px;
+  }
+  .row {
+    flex-direction: column;
+  }
+
+  .column {
+    flex-basis: 100%;
+  }
+
+  .column img.esquerda {
+    max-width: 149px;
+    height: 102px;
+    margin-bottom: 10px;
+  }
+
+  .column h2 {
+    margin-top: 0;
+  }
+}
