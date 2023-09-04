@@ -1,0 +1,53 @@
+.pre-header {
+  width: 100vw;
+  height: 40px;
+  background-color: #ff7323;
+  text-align: end;
+}
+
+.pre-header button {
+  width: 180px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.botao-1 {
+  background-color: #16375c;
+  color: #fff;
+  margin-right: 20px;
+  font-family: "apotek-comp", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.botao-2 {
+  background-color: #fdb913;
+  color: #fff;
+  margin-right: 180px;
+  font-family: "apotek-comp", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@media (max-width: 400px) {
+  .pre-header {
+    width: 100vw;
+    height: 32px;
+  }
+  .pre-header button {
+    width: 135px;
+    height: 32px;
+    font-size: 18px;
+  }
+  .botao-1 {
+    margin-right: 16px;
+  }
+  .botao-2 {
+    margin-right: 16px;
+  }
+}
