@@ -16,6 +16,38 @@ h1 {
   text-align: start;
 }
 
+.catalogo img {
+  width: 100%;
+  height: auto;
+}
+
+.catalogo {
+  position: relative;
+  text-align: center;
+}
+
+.botoes-catalogo {
+  display: flex;
+  justify-content: center; /* Centraliza os botões horizontalmente */
+  position: absolute;
+  bottom: 60px; /* Posiciona os botões no topo */
+  left: 0; /* Alinha os botões à esquerda */
+  right: 60px; /* Alinha os botões à direita */
+}
+
+.catalogo button {
+  margin: 0 125px;
+  border-radius: 30px;
+  color: #fff;
+  font-family: "eigerdals", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  background-color: #ff7323;
+  border: none;
+  font-size: 20px;
+  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+}
+
 @media (max-width: 801px) {
   h1 {
     font-size: 30px;
