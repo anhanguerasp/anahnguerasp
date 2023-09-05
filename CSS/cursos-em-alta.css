@@ -7,7 +7,7 @@
 }
 
 .margem-titulo {
-  margin-left: 20px;
+  margin-left: 25px;
 }
 
 .cursos-lista h2 {
@@ -26,6 +26,7 @@
   margin-right: auto;
   overflow-x: auto;
   list-style: none;
+  justify-content: flex-start;
 }
 
 .cursos-lista a {
@@ -64,6 +65,13 @@
   font-style: normal;
   font-size: 20px;
   color: white;
+}
+
+.condicoes {
+  margin-top: 20px;
+  color: #ffffff;
+  margin-left: 30px;
+  margin-bottom: 0px;
 }
 
 @media (max-width: 800px) {
