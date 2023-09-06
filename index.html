@@ -202,20 +202,20 @@
         <form class="form">
           <div>
             <label for="nome">Nome</label>
-            <input type="text" id="nome" name="nome" placeholder="Seu nome">
+            <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
           </div>
           <div>
             <label for="telefone">Telefone</label>
-            <input type="text" id="telefone" name="telefone" placeholder="(11)99999-9999">
+            <input type="text" id="telefone" name="telefone" placeholder="(11)99999-9999" onkeyup="handlePhone(event)" maxlength="15" required>
           </div>
           <div class="col-2">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="contato@email.com.br" autocomplete="on">
+            <input type="email" id="email" name="email" placeholder="contato@email.com.br" autocomplete="on" required>
           </div>
           <div class="col-2">
             <label for="Modalidade">Modalidade</label>
-            <select class="form-select" name="modalidade" type="select" id="Modalidade">
-              <option value="Modalidade">Escolha a modalidade</option>
+            <select class="form-select" name="modalidade" type="select" id="Modalidade" required>
+              <option value="" disabled selected>Escolha a modalidade</option>
               <option value="100% EAD">100% EAD</option>
               <option value="Presencial">Presencial</option>
               <option value="Semi-Presencial">Semi-Presencial</option>
@@ -223,12 +223,12 @@
           </div>
           <div class="col-2">
             <label for="curso de interesse">Curso de Interesse</label>
-            <input type="text" id="curso de interesse" name="curso" placeholder="Curso de interesse">
+            <input type="text" id="curso de interesse" name="curso" placeholder="Curso de interesse" required>
           </div>
           <div class="col-2">
             <label for="polo de interesse">Polo de Interesse</label>
-            <select class="form-select" name="polo" id="polo de interesse">
-              <option value="Escolha seu polo">Escolha seu Polo</option>
+            <select class="form-select" name="polo" id="polo de interesse" required>
+              <option value="" disabled selected>Escolha o Polo</option>
               <option value="Araraquara">Araraquara</option>
               <option value="Barueri">Barueri</option>
               <option value="Bauru">Bauru</option>
@@ -254,5 +254,19 @@
     </div>
   </div>
 </body>
+<script>
+  const handlePhone = (event) => {
+    let input = event.target
+    input.value = phoneMask(input.value)
+  }
+
+  const phoneMask = (value) => {
+    if (!value) return ""
+    value = value.replace(/\D/g, '')
+    value = value.replace(/(\d{2})(\d)/, "($1) $2")
+    value = value.replace(/(\d)(\d{4})$/, "$1-$2")
+    return value
+  }
+</script>
 
 </html>
