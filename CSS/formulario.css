@@ -99,7 +99,7 @@
 
 .form .col-2 select, /* Seleciona os elementos <select> dentro de .col-2 */
 .form input[type="text"],
-.form input[type="email"],
+.form input[type="email"],.form input[type="tel"],
 .form textarea {
   font-family: "eigerdals", sans-serif;
   font-weight: 400;
@@ -114,6 +114,7 @@
 
 .form input[type="text"]:focus,
 .form input[type="email"]:focus,
+.form input[type="tel"]:focus,
 .form textarea:focus,
 .form .col-2 select:focus {
   /* Aplicar estilo de foco para os elementos <select> */
@@ -139,6 +140,10 @@
   max-width: max-content;
   border: none;
   cursor: pointer;
+}
+
+.botao-form:hover {
+  background: linear-gradient(#ff7323, #f17c39);
 }
 
 .loading {
@@ -184,6 +189,10 @@
 }
 
 @media (max-width: 600px) {
+  .botao-form {
+    padding: 12px 16px;
+    font-size: 1rem;
+  }
   .form {
     grid-template-columns: 1fr;
   }
