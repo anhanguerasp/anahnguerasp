@@ -77,3 +77,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.querySelector("form").addEventListener("submit", handleSubmit);
 });
+
+// Alerta de página em construção
+document.addEventListener("DOMContentLoaded", function () {
+  const links = document.querySelectorAll(".header-links a");
+
+  function mostrarAlerta(event) {
+    event.preventDefault();
+    alert("Desculpe o transtorno, essa página ainda está em construção");
+  }
+
+  links.forEach((link) => {
+    link.addEventListener("click", mostrarAlerta);
+  });
+});

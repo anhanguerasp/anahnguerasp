@@ -1,0 +1,104 @@
+.container-footer {
+  box-sizing: border-box;
+  max-width: 1200px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-bg {
+  background-color: #ffffff;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 3fr 5fr 4fr;
+  gap: 40px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer h3 {
+  margin-bottom: 32px;
+}
+
+.contato-footer a {
+  display: block;
+  width: 100px;
+  height: 100px;
+  padding-left: 48px;
+  text-decoration: none;
+  color: #595959;
+  font-size: 15px;
+}
+
+.contato-footer li:first-child {
+  background: url("../img/telefone-footer.svg") no-repeat;
+  margin: 0;
+}
+
+.contato-footer li:last-child {
+  background: url("../img/email-footer.svg") no-repeat;
+  margin: 0;
+}
+
+.footer-contato ul {
+  margin-bottom: 32px;
+}
+
+.footer-contato li:nth-child(even):after {
+  content: "";
+  display: block;
+  max-width: 360px;
+  height: 2px;
+  background: #a8a8a8;
+  margin-top: 50px;
+}
+
+.footer li {
+  list-style: none;
+}
+
+.footer-redes {
+  display: flex;
+  gap: 32px;
+  margin-left: 50px;
+}
+
+.footer a:hover {
+  color: #ff7323;
+}
+
+.footer-copy {
+  grid-column: 1/-1;
+  margin-top: 40px;
+}
+
+.footer-informacoes a {
+  text-decoration: none;
+  color: #595959;
+}
+
+.footer-informacoes li {
+  margin-bottom: 16px;
+}
+
+@media (max-width: 800px) {
+  .footer > img {
+    display: none;
+  }
+  .footer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  .footer-copy {
+    margin-top: 0px;
+  }
+}
