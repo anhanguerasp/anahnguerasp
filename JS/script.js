@@ -28,3 +28,52 @@ function menuOnClick() {
   document.getElementById("nav").classList.toggle("change");
   document.getElementById("menu-bg").classList.toggle("change-bg");
 }
+
+// JS formulário
+
+document.addEventListener("DOMContentLoaded", function () {
+  const button = document.querySelector(".botao-form");
+
+  const addloading = () => {
+    button.innerHTML =
+      '<img src="./img/loading_svgrepo.com.png" class="loading">';
+  };
+
+  const removeloading = () => {
+    button.innerHTML = "Inscreva-se";
+  };
+
+  const clearFields = () => {
+    document.querySelector("input[name=nome]").value = "";
+    document.querySelector("input[name=telefone]").value = "";
+    document.querySelector("input[name=email]").value = "";
+    document.querySelector("select[name=modalidade]").value = "";
+    document.querySelector("input[name=curso]").value = "";
+    document.querySelector("select[name=polo]").value = "";
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    addloading();
+    const nome = document.querySelector("input[name=nome]").value;
+    const telefone = document.querySelector("input[name=telefone]").value;
+    const email = document.querySelector("input[name=email]").value;
+    const modalidade = document.querySelector("select[name=modalidade]").value;
+    const curso = document.querySelector("input[name=curso]").value;
+    const polo = document.querySelector("select[name=polo]").value;
+
+    fetch("https://api.sheetmonkey.io/form/uwnN9fSvLjroHLkpXPQsmk", {
+      method: "post",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ nome, telefone, email, modalidade, curso, polo }),
+    }).then(() => {
+      removeloading();
+      clearFields(); // Limpa os campos após o envio do formulário
+    });
+  };
+
+  document.querySelector("form").addEventListener("submit", handleSubmit);
+});

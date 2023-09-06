@@ -18,12 +18,13 @@ h1 {
 
 .catalogo img {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 .catalogo {
   position: relative;
   text-align: center;
+  margin: 0;
 }
 
 .botoes-catalogo {

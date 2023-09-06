@@ -74,7 +74,7 @@
 
   <section class="section">
     <h1>Especialidades!</h1>
-    <div class="container">
+    <div class="container-especialidade">
       <div class="item">
         <img class="imagem-especialidade" src="./img/chapeu.png" alt="Imagem Esquerda 1">
         <div class="texto">
@@ -130,7 +130,7 @@
   </article>
 
   <article class="tecnologia-bg">
-    <div class="tecnologia container">
+    <div class="tecnologia container-diferenciais">
       <div class="tecnologia-conteudo">
         <span>Diferenciais Anhanguera</span>
         <h2>Por que você deveria estudar na anhanguera?</h2>
@@ -174,82 +174,85 @@
     </div>
   </section>
 
-  <div class="contato container">
-    <section class="contato-dados" aria-label="Endereço">
-      <h2>Dê o primeiro passo para sua mudança de vida!</h2>
-      <p>Entre em contato:</p>
-      <address class="contato-meios">
-        <a href="mailto:contato@bikcraft.com">contato@anhanguerasp.com.br</a>
-        <a href="tel:+5521999999999">+55 11 96951-0032</a>
-      </address>
-      <div class="contato-redes">
-        <a href="https://www.facebook.com/ComunidadeAnhangueraSP">
-          <img src="./img/facebook.svg" alt="Facebook">
-        </a>
-        <a href="https://www.instagram.com/anhangueraspoficial/">
-          <img src="./img/instagram-p.svg" alt="Instagram">
-        </a>
-        <a href="https://www.linkedin.com/school/anhanguera-sp-oficial">
-          <img src="./img/linkedin.svg" alt="Linkedin">
-        </a>
-        <a href="https://www.youtube.com/channel/UCXecYFqUtKzven0EERTwvvQ">
-          <img src="./img/youtube.svg" alt="Youtube">
-        </a>
-      </div>
-    </section>
-    <section class="contato-formulario" aria-label="formulario">
-      <form class="form" action="https://api.sheetmonkey.io/form/iGoazYnXWrMbFKkPU6j5L4" method="post">
-        <div>
-          <label for="nome">Nome</label>
-          <input type="text" id="nome" name="nome" placeholder="Seu nome">
+  <div class="bg-forms">
+    <div class="contato container-forms">
+      <section class="contato-dados" aria-label="Endereço">
+        <h2>Dê o primeiro passo para sua mudança de vida!</h2>
+        <p>Entre em contato:</p>
+        <address class="contato-meios">
+          <a href="mailto:contato@bikcraft.com">contato@anhanguerasp.com.br</a>
+          <a href="tel:+5521999999999">+55 11 96951-0032</a>
+        </address>
+        <div class="contato-redes">
+          <a href="https://www.facebook.com/ComunidadeAnhangueraSP">
+            <img src="./img/facebook.svg" alt="Facebook">
+          </a>
+          <a href="https://www.instagram.com/anhangueraspoficial/">
+            <img src="./img/instagram-p.svg" alt="Instagram">
+          </a>
+          <a href="https://www.linkedin.com/school/anhanguera-sp-oficial">
+            <img src="./img/linkedin.svg" alt="Linkedin">
+          </a>
+          <a href="https://www.youtube.com/channel/UCXecYFqUtKzven0EERTwvvQ">
+            <img src="./img/youtube.svg" alt="Youtube">
+          </a>
         </div>
-        <div>
-          <label for="telefone">Telefone</label>
-          <input type="text" id="telefone" name="telefone" placeholder="(11)99999-9999">
-        </div>
-        <div class="col-2">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="contato@email.com.br">
-        </div>
-        <div class="col-2">
-          <label for="Modalidade">Modalidade</label>
-          <select class="form-select" name="status" type="select">
-            <option value="Modalidade">Escolha a modalidade</option>
-            <option value="100% EAD">100% EAD</option>
-            <option value="Presencial">Presencial</option>
-            <option value="Semi-Presencial">Semi-Presencial</option>
-          </select>
-        </div>
-        <div class="col-2">
-          <label for="curso de interesse">Curso de Interesse</label>
-          <input type="text" id="curso de interesse" name="curso de interesse" placeholder="Curso de interesse">
-        </div>
-        <div class="col-2">
-          <label for="polo de interesse">Polo de Interesse</label>
-          <select class="form-select" name="status">
-            <option value="Escolha seu polo">Escolha seu Polo</option>
-            <option value="Araraquara">Araraquara</option>
-            <option value="Barueri">Barueri</option>
-            <option value="Bauru">Bauru</option>
-            <option value="Cidade Tiradentes">Cidade Tiradentes</option>
-            <option value="Jabaquara">Jabaquara</option>
-            <option value="Limeira">Limeira</option>
-            <option value="Paulista">Paulista</option>
-            <option value="Pirapora do Bom Jesus">Pirapora do Bom Jesus</option>
-            <option value="Republica">República</option>
-            <option value="Rio Claro">Rio Claro</option>
-            <option value="Santa Gertrudes">Santa Gertrudes</option>
-            <option value="Santana de Parnaiba">Santana de Parnaiba</option>
-            <option value="sao miguel">São Miguel</option>
-            <option value="Tatuape">Tatuapé</option>
-            <option value="Vila Matilde">Vila Matilde</option>
-          </select>
-        </div>
-      </form>
-      <button class="botao">Inscreva-se</button>
-    </section>
+      </section>
+      <section class="contato-formulario" aria-label="formulario">
+        <form class="form">
+          <div>
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome">
+          </div>
+          <div>
+            <label for="telefone">Telefone</label>
+            <input type="text" id="telefone" name="telefone" placeholder="(11)99999-9999">
+          </div>
+          <div class="col-2">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="contato@email.com.br" autocomplete="on">
+          </div>
+          <div class="col-2">
+            <label for="Modalidade">Modalidade</label>
+            <select class="form-select" name="modalidade" type="select" id="Modalidade">
+              <option value="Modalidade">Escolha a modalidade</option>
+              <option value="100% EAD">100% EAD</option>
+              <option value="Presencial">Presencial</option>
+              <option value="Semi-Presencial">Semi-Presencial</option>
+            </select>
+          </div>
+          <div class="col-2">
+            <label for="curso de interesse">Curso de Interesse</label>
+            <input type="text" id="curso de interesse" name="curso" placeholder="Curso de interesse">
+          </div>
+          <div class="col-2">
+            <label for="polo de interesse">Polo de Interesse</label>
+            <select class="form-select" name="polo" id="polo de interesse">
+              <option value="Escolha seu polo">Escolha seu Polo</option>
+              <option value="Araraquara">Araraquara</option>
+              <option value="Barueri">Barueri</option>
+              <option value="Bauru">Bauru</option>
+              <option value="Cidade Tiradentes">Cidade Tiradentes</option>
+              <option value="Jabaquara">Jabaquara</option>
+              <option value="Limeira">Limeira</option>
+              <option value="Paulista">Paulista</option>
+              <option value="Pirapora do Bom Jesus">Pirapora do Bom Jesus</option>
+              <option value="Republica">República</option>
+              <option value="Rio Claro">Rio Claro</option>
+              <option value="Santa Gertrudes">Santa Gertrudes</option>
+              <option value="Santana de Parnaiba">Santana de Parnaiba</option>
+              <option value="sao miguel">São Miguel</option>
+              <option value="Tatuape">Tatuapé</option>
+              <option value="Vila Matilde">Vila Matilde</option>
+            </select>
+          </div>
+          <button class="botao-form" type="submit">
+            Inscreva-se
+          </button>
+        </form>
+      </section>
+    </div>
   </div>
-
 </body>
 
 </html>
