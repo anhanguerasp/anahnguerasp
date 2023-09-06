@@ -115,3 +115,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
   botaoParcerias.addEventListener("click", mostrarAlerta);
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const linksInformacoes = document.querySelectorAll(
+    ".footer-informacoes li a"
+  );
+
+  function mostrarAlerta(event) {
+    event.preventDefault();
+    alert("Desculpe o transtorno, essa página ainda está em construção");
+  }
+
+  linksInformacoes.forEach((link) => {
+    link.addEventListener("click", mostrarAlerta);
+  });
+});
