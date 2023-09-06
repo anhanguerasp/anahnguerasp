@@ -20,7 +20,7 @@
   text-align: justify;
 }
 
-.container {
+.container-especialidade {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -47,7 +47,7 @@
   h1 {
     font-size: 30px;
   }
-  .container {
+  .container-especialidade {
     margin: auto;
   }
 }
@@ -58,7 +58,7 @@
     margin-bottom: 40px;
   }
 
-  .container {
+  .container-especialidade {
     margin: auto;
   }
 

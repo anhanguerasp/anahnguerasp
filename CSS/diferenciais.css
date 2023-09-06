@@ -5,8 +5,8 @@
 .tecnologia {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px; /* Reduzido o espaço entre as colunas */
-  margin-right: 10px; /* Adicionado margem direita */
+  gap: 60px; /* Reduzido o espaço entre as colunas */
+  margin-left: 50px;
 }
 
 .tecnologia-imagem img {
