@@ -91,3 +91,42 @@ document.addEventListener("DOMContentLoaded", function () {
     link.addEventListener("click", mostrarAlerta);
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuItems = document.querySelectorAll("#nav li");
+
+  function mostrarAlerta(event) {
+    event.preventDefault();
+    alert("Desculpe o transtorno, essa página ainda está em construção");
+  }
+
+  menuItems.forEach((item) => {
+    const link = item.querySelector("a");
+    link.addEventListener("click", mostrarAlerta);
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const botaoParcerias = document.querySelector(".botao-1");
+
+  function mostrarAlerta() {
+    alert("Desculpe o transtorno, essa página ainda está em construção");
+  }
+
+  botaoParcerias.addEventListener("click", mostrarAlerta);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const linksInformacoes = document.querySelectorAll(
+    ".footer-informacoes li a"
+  );
+
+  function mostrarAlerta(event) {
+    event.preventDefault();
+    alert("Desculpe o transtorno, essa página ainda está em construção");
+  }
+
+  linksInformacoes.forEach((link) => {
+    link.addEventListener("click", mostrarAlerta);
+  });
+});
