@@ -1,6 +1,6 @@
 .container-footer {
   box-sizing: border-box;
-  max-width: 1200px;
+  max-width: 100%;
   padding-left: 20px;
   padding-right: 20px;
   margin-left: auto;
@@ -24,9 +24,9 @@
 }
 
 .contato-footer a {
-  display: block;
-  width: 100px;
-  height: 100px;
+  display: inline-block;
+  max-width: max-content;
+  margin-bottom: 24px;
   padding-left: 48px;
   text-decoration: none;
   color: #595959;
@@ -35,12 +35,10 @@
 
 .contato-footer li:first-child {
   background: url("../img/telefone-footer.svg") no-repeat;
-  margin: 0;
 }
 
 .contato-footer li:last-child {
   background: url("../img/email-footer.svg") no-repeat;
-  margin: 0;
 }
 
 .footer-contato ul {

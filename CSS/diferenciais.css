@@ -6,7 +6,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px; /* Reduzido o espaço entre as colunas */
-  margin-left: 50px;
+  margin-left: 180px;
 }
 
 .tecnologia-imagem img {
