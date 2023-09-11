@@ -2,6 +2,29 @@
   width: 100%;
   overflow: hidden;
   margin: 0;
+  position: relative;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.carousel-button i {
+  color: #333; /* Cor dos ícones */
+}
+
+#prevButton {
+  left: 20px;
+}
+
+#nextButton {
+  right: 20px;
 }
 
 .carousel-inner {

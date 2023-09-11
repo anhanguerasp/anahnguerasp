@@ -19,7 +19,18 @@ document.addEventListener("DOMContentLoaded", function () {
     showSlide(currentSlide);
   }
 
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+
   setInterval(nextSlide, 5000); // Troca de imagem a cada 5 segundos
+
+  const nextButton = document.getElementById("nextButton");
+  const prevButton = document.getElementById("prevButton");
+
+  nextButton.addEventListener("click", nextSlide);
+  prevButton.addEventListener("click", prevSlide);
 });
 
 //JS Menu Hamburguer
