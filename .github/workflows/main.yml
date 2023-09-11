@@ -9,13 +9,13 @@ jobs:
     steps:
       uses: actions/checkout@v3
       if: github.event_name == 'pull_request'
-        with:
-        fetch-depth: 0
-        ref: ${{ github.event.pull_request.head.ref }}
+      with:
+      fetch-depth: 0
+      ref: ${{ github.event.pull_request.head.ref }}
       uses: actions/checkout@v3
       if: github.event_name == 'push'
-        with:
-        fetch-depth: 0
+      with:
+      fetch-depth: 0
 
       - name: FTP Deploy Locaweb
         uses: locaweb/ftp-deploy@1.0.0
