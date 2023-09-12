@@ -13,4 +13,4 @@ jobs:
           host: ${{ secrets.HOST }}
           user: ${{ secrets.USER }}
           password: ${{ secrets.PASS }}
-          localDir: "dist"
+          localDir: \\warriors0013-w-spa.fs.locaweb.com.br\WNFS-0001\anhanguerasp1\web
