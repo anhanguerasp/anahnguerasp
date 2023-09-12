@@ -2,6 +2,7 @@
   background-color: #fff;
   height: 80px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding: 10px 180px;
@@ -9,10 +10,10 @@
 
 .header-links {
   display: flex;
-  gap: 2.5rem;
+  gap: 1rem;
 }
 .header-links a {
-  font-size: 24px;
+  font-size: 20px;
   text-decoration: none;
   color: #a8a8a8;
   font-family: "eigerdals", sans-serif;
@@ -23,10 +24,6 @@
 .header-links a:hover {
   color: #ff7323;
   border-bottom: 2px solid #ff7323;
-}
-
-.logo {
-  margin-bottom: 15px;
 }
 
 body {
@@ -129,19 +126,6 @@ body {
   width: 520px;
   height: 460px;
   transform: translate(-60%, -30%);
-}
-
-@media (max-width: 1500px) {
-  .header-links {
-    display: none;
-  }
-  #menu {
-    display: block;
-  }
-  .logo {
-    margin-bottom: 0; /* Remova a margem inferior no logo */
-    margin-left: 350px;
-  }
 }
 
 @media (max-width: 801px) {

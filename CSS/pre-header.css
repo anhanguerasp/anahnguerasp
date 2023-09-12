@@ -19,7 +19,6 @@
 .botao-1 {
   background-color: #16375c;
   color: #fff;
-  margin-right: 20px;
   font-family: "apotek-comp", sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -27,8 +26,8 @@
 
 .botao-2 {
   background-color: #fdb913;
+  margin-right: 25px;
   color: #fff;
-  margin-right: 180px;
   font-family: "apotek-comp", sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -43,11 +42,5 @@
     width: 135px;
     height: 32px;
     font-size: 18px;
-  }
-  .botao-1 {
-    margin-right: 16px;
-  }
-  .botao-2 {
-    margin-right: 16px;
   }
 }
