@@ -1,13 +1,16 @@
+.container-cursos {
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin-left: 80px;
+  margin-right: auto;
+}
+
 .cursos-lista {
   background-image: url("/img/fundo-cursos.png");
   background-size: cover;
   background-position: center;
   margin-top: 0px;
   margin-bottom: 0px;
-}
-
-.margem-titulo {
-  margin-left: 180px;
 }
 
 .cursos-lista h2 {
@@ -20,13 +23,16 @@
 }
 
 .cursos-lista ul {
+  margin: 0px;
+  padding: 0 20px 20px 20px;
+  list-style: none;
   display: flex;
-  gap: 40px;
+  gap: 10px;
   max-width: 1400px;
+  margin-left: auto;
   margin-right: auto;
   overflow-x: auto;
-  list-style: none;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 
 .cursos-lista a {
@@ -70,11 +76,14 @@
 .condicoes {
   margin-top: 20px;
   color: #ffffff;
-  margin-left: 30px;
+  margin-left: 90px;
   margin-bottom: 0px;
 }
 
 @media (max-width: 800px) {
+  .container-cursos {
+    margin-left: 0px;
+  }
   .cursos-lista {
     padding-bottom: 60px;
   }
