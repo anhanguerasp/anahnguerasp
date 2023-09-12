@@ -20,6 +20,7 @@ h1 {
   margin-bottom: 0px;
   padding-top: 10px;
   text-align: start;
+  margin-left: 80px;
 }
 
 .catalogo img {
@@ -87,6 +88,12 @@ h1 {
 
   .catalogo button {
     width: 100%; /* Largura de 100% para ocupar toda a largura disponível */
+  }
+}
+
+@media (max-width: 800px) {
+  h1 {
+    margin-left: 0px;
   }
 }
 
