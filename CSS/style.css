@@ -10,3 +10,6 @@
 @import url("./HomePage/especialidades.css");
 @import url("./HomePage/cursos-em-alta.css");
 @import url("./HomePage/diferenciais.css");
+
+/* Estidos Graduação */
+@import url("/CSS/GraduacaoPage/gintro.css");

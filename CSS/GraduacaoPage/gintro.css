@@ -1,0 +1,115 @@
+.section-g {
+  background-image: url("/img/fundo-g.png");
+  background-color: #ffffff;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.intro-G {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.intro-G h1 {
+  margin-left: 0;
+}
+
+.intro-G img {
+  max-width: 100vw;
+}
+
+.texto-g {
+  font-family: "eigerdals", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #595959;
+  text-align: justify;
+  margin: 0 60px;
+  font-size: 30px;
+  line-height: 47px;
+  margin-bottom: 40px;
+}
+
+.cursos-alta-g {
+  background-color: #fdb913;
+}
+
+.cursos-alta-g h2 {
+  margin-bottom: 40px;
+  font-family: "apotek-comp", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 36px;
+  color: #ededed;
+}
+
+.cursos-alta-g ul {
+  margin: 0px;
+  padding: 0 20px 20px 20px;
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: auto;
+  justify-content: space-between;
+}
+
+.cursos-alta-g a {
+  display: block;
+  color: transparent;
+}
+
+.cursos-alta-g img {
+  margin-bottom: 0px;
+}
+
+.cursos-alta-g h2 {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.cursos-alta-g h2::before {
+  content: "";
+  display: inline-block;
+  height: 8px;
+  width: 12px;
+  margin-right: 8px;
+  background-color: #ff7323;
+  transition: width 0.2s;
+}
+
+.cursos-alta-g a:hover h2::before {
+  width: 24px;
+}
+
+.cursos-alta-g li span {
+  padding-left: 20px;
+  font-family: "eigerdals", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 20px;
+  color: white;
+}
+
+.condicoes {
+  margin-top: 20px;
+  color: #ffffff;
+  margin-left: 90px;
+  margin-bottom: 0px;
+}
+
+@media (max-width: 800px) {
+  .cursos-alta-g {
+    padding-bottom: 60px;
+  }
+  .cursos-alta-g ul {
+    gap: 20px;
+  }
+}
