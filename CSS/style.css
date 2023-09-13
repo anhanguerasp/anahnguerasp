@@ -1,9 +1,8 @@
-/* Estilos globais */
-@import url("./global.css");
-@import url("./pre-header.css");
-@import url("./header.css");
-@import url("./formulario.css");
-@import url("./footer.css");
+@import url("/CSS/global.css");
+@import url("/CSS/pre-header.css");
+@import url("/CSS/header.css");
+@import url("/CSS/formulario.css");
+@import url("/CSS/footer.css");
 
 /* Estilos Home */
 @import url("./HomePage/carrossel.css");
