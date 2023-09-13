@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .section-g {
   background-image: url("./img/fundo-g.png");
   background-color: #ffffff;
@@ -122,3 +123,129 @@
     display: none;
   }
 }
+=======
+.section-g {
+  background-image: url("./img/fundo-g.png");
+  background-color: #ffffff;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.section-g img {
+  max-width: 100%;
+  height: auto;
+}
+
+.intro-G {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.intro-G h1 {
+  margin-left: 0;
+}
+
+.intro-G img {
+  max-width: 100vw;
+}
+
+.texto-g {
+  font-family: "eigerdals", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #595959;
+  text-align: justify;
+  margin: 0 60px;
+  font-size: 30px;
+  line-height: 47px;
+  margin-bottom: 40px;
+}
+
+.catalogo-g img {
+  max-width: 100%;
+}
+
+.catalogo-g {
+  position: relative;
+}
+
+.botoes-catalogo-g {
+  display: flex;
+  justify-content: center; /* Centraliza os botões horizontalmente */
+  position: absolute;
+  bottom: 5%; /* Posiciona os botões no topo */
+  left: 0; /* Alinha os botões à esquerda */
+  right: 5%; /* Alinha os botões à direita */
+}
+
+.catalogo-g button {
+  margin: 0 2%;
+  border-radius: 30px;
+  color: #fff;
+  font-family: "eigerdals", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  background-color: #ff7323;
+  border: none;
+  font-size: 20px;
+  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+  width: 41%;
+  cursor: pointer;
+}
+
+@media (min-width: 800px) {
+  .catalogos-mobile-g {
+    display: none;
+  }
+  .tabela-m-g {
+    display: none;
+  }
+}
+
+@media (max-width: 801px) {
+  .cursos-alta-g {
+    padding-bottom: 30px;
+  }
+  .cursos-alta-g ul {
+    gap: 20px;
+  }
+  .intro-G {
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .texto-g {
+    font-size: 20px;
+    line-height: 29px;
+    margin: 20px 0;
+  }
+  .intro-G img {
+    width: 63px;
+    height: 63px;
+  }
+  .intro-G h1 {
+    font-size: 24px;
+  }
+  .catalogos-mobile-g {
+    display: block;
+  }
+  .catalogos-desktop-g {
+    display: none;
+  }
+  .botoes-catalogo-g {
+    flex-direction: column; /* Altera a direção dos botões para uma coluna em telas menores */
+  }
+  .catalogo-g button:nth-child(1) {
+    margin-bottom: 10%; /* Espaçamento abaixo do botão de graduação */
+  }
+  .catalogo-g button {
+    width: 100%; /* Largura de 100% para ocupar toda a largura disponível */
+  }
+  .tabela-d-g {
+    display: none;
+  }
+}
+>>>>>>> 06ceadf (merge)
