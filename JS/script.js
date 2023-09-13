@@ -81,7 +81,15 @@ document.addEventListener("DOMContentLoaded", function () {
         Accept: "application/json",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ nome, telefone, email, modalidade, curso, polo }),
+      body: JSON.stringify({
+        nome,
+        telefone,
+        email,
+        modalidade,
+        tipo,
+        curso,
+        polo,
+      }),
     }).then(() => {
       removeloading();
       clearFields(); // Limpa os campos após o envio do formulário
@@ -92,12 +100,15 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Alerta de página em construção
+
 document.addEventListener("DOMContentLoaded", function () {
   const links = document.querySelectorAll(".header-links a");
 
   function mostrarAlerta(event) {
-    event.preventDefault();
-    alert("Desculpe o transtorno, essa página ainda está em construção");
+    if (!event.target.classList.contains("excluir-alerta")) {
+      event.preventDefault();
+      alert("Desculpe o transtorno, essa página ainda está em construção");
+    }
   }
 
   links.forEach((link) => {
@@ -109,8 +120,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const menuItems = document.querySelectorAll("#nav li");
 
   function mostrarAlerta(event) {
-    event.preventDefault();
-    alert("Desculpe o transtorno, essa página ainda está em construção");
+    const link = event.target;
+
+    if (link.tagName === "A") {
+      const href = link.getAttribute("href");
+
+      if (href !== "./graduacao.html" && href !== "./index.html") {
+        event.preventDefault();
+        alert("Desculpe o transtorno, essa página ainda está em construção");
+      }
+    }
   }
 
   menuItems.forEach((item) => {
