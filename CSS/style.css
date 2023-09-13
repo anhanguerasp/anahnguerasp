@@ -12,6 +12,6 @@
 @import url("./HomePage/diferenciais.css");
 
 /* Estidos Graduação */
-@import url("/CSS/GraduacaoPage/gintro.css");
-@import url("/CSS/GraduacaoPage/cursos-alta-g.css");
-@import url("/CSS/GraduacaoPage/forms-g.css");
+@import url("./GraduacaoPage/gintro.css");
+@import url("./GraduacaoPage/cursos-alta-g.css");
+@import url("./GraduacaoPage/forms-g.css");
