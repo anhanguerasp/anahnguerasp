@@ -6,10 +6,11 @@
 @import url("./footer.css");
 
 /* Estilos Home */
-@import url("../carrossel.css");
-@import url("../especialidades.css");
-@import url("../cursos-em-alta.css");
-@import url("../diferenciais.css");
+@import url("./HomePage/carrossel.css");
+@import url("./HomePage/especialidades.css");
+@import url("./HomePage/cursos-em-alta.css");
+@import url("./HomePage/diferenciais.css");
 
 /* Estidos Graduação */
-@import url("../gintro.css");
+@import url("/CSS/GraduacaoPage/gintro.css");
+
