@@ -15,3 +15,7 @@
 @import url("./GraduacaoPage/gintro.css");
 @import url("./GraduacaoPage/cursos-alta-g.css");
 @import url("./GraduacaoPage/forms-g.css");
+
+/* Estilos Pós Graduação */
+@import url("./PosPage/intropos.css");
+@import url("./PosPage/diferenciaspos.css");
