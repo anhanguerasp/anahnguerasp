@@ -3,11 +3,3 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
-.section-p h3,
-.section-p img,
-.section-p p {
-  width: calc(25% - 20px); /* Defina a largura desejada para cada coluna */
-  margin: 10px; /* Adicione margem para espaçamento entre as colunas */
-  box-sizing: border-box;
-}
