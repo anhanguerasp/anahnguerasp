@@ -149,16 +149,16 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const linksInformacoes = document.querySelectorAll(
-    ".footer-informacoes li a"
-  );
+  const links = document.querySelectorAll(".footer-informacoes li a");
 
   function mostrarAlerta(event) {
-    event.preventDefault();
-    alert("Desculpe o transtorno, essa página ainda está em construção");
+    if (!event.target.classList.contains("excluir-alerta")) {
+      event.preventDefault();
+      alert("Desculpe o transtorno, essa página ainda está em construção");
+    }
   }
 
-  linksInformacoes.forEach((link) => {
+  links.forEach((link) => {
     link.addEventListener("click", mostrarAlerta);
   });
 });
