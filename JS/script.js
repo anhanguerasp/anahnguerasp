@@ -40,6 +40,23 @@ function menuOnClick() {
   document.getElementById("menu-bg").classList.toggle("change-bg");
 }
 
+// JS Menu Parcerias
+// document.addEventListener("DOMContentLoaded", function () {
+//   const $menu = document.getElementById("menu-parcerias");
+//   const $menuTrigger = document.getElementById("menu-trigger");
+//   let state = $menu.dataset.aberto;
+
+//   $menuTrigger.addEventListener("click", () => {
+//     if (state == "false") {
+//       state = "true";
+//     } else {
+//       state = "false";
+//     }
+
+//     $menu.dataset.aberto = state;
+//   });
+// });
+
 // JS formulário
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -55,6 +72,10 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   const clearFields = () => {
+    document.querySelector("input[name=nomealuno]").value = "";
+    document.querySelector("input[name=ra]").value = "";
+    document.querySelector("input[name=telefonealuno]").value = "";
+    document.querySelector("input[name=emailaluno]").value = "";
     document.querySelector("input[name=nome]").value = "";
     document.querySelector("input[name=telefone]").value = "";
     document.querySelector("input[name=email]").value = "";
@@ -67,6 +88,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const handleSubmit = (event) => {
     event.preventDefault();
     addloading();
+    const parceria = document.querySelector("input[name=parceria]").value;
+    const nomealuno = document.querySelector("input[name=nomealuno]").value;
+    const ra = document.querySelector("input[name=ra]").value;
+    const telefonealuno = document.querySelector(
+      "input[name=telefonealuno]"
+    ).value;
+    const emailaluno = document.querySelector("input[name=emailaluno]").value;
     const nome = document.querySelector("input[name=nome]").value;
     const telefone = document.querySelector("input[name=telefone]").value;
     const email = document.querySelector("input[name=email]").value;
@@ -82,6 +110,11 @@ document.addEventListener("DOMContentLoaded", function () {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
+        parceria,
+        nomealuno,
+        ra,
+        telefonealuno,
+        emailaluno,
         nome,
         telefone,
         email,
@@ -136,16 +169,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const link = item.querySelector("a");
     link.addEventListener("click", mostrarAlerta);
   });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const botaoParcerias = document.querySelector(".botao-1");
-
-  function mostrarAlerta() {
-    alert("Desculpe o transtorno, essa página ainda está em construção");
-  }
-
-  botaoParcerias.addEventListener("click", mostrarAlerta);
 });
 
 document.addEventListener("DOMContentLoaded", function () {
