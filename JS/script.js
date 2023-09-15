@@ -40,23 +40,6 @@ function menuOnClick() {
   document.getElementById("menu-bg").classList.toggle("change-bg");
 }
 
-// JS Menu Parcerias
-// document.addEventListener("DOMContentLoaded", function () {
-//   const $menu = document.getElementById("menu-parcerias");
-//   const $menuTrigger = document.getElementById("menu-trigger");
-//   let state = $menu.dataset.aberto;
-
-//   $menuTrigger.addEventListener("click", () => {
-//     if (state == "false") {
-//       state = "true";
-//     } else {
-//       state = "false";
-//     }
-
-//     $menu.dataset.aberto = state;
-//   });
-// });
-
 // JS formulário
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -88,7 +71,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const handleSubmit = (event) => {
     event.preventDefault();
     addloading();
-    const parceria = document.querySelector("input[name=parceria]").value;
+    const amigopix = document.querySelector("input[name=amigopix]").value;
+    const profpix = document.querySelector("input[name=profpix]").value;
+    const nomeprof = document.querySelector("input[name=nomeprof]").value;
+    const telefoneprof = document.querySelector(
+      "input[name=telefoneprof]"
+    ).value;
+    const emailprof = document.querySelector("input[name=emailprof]").value;
     const nomealuno = document.querySelector("input[name=nomealuno]").value;
     const ra = document.querySelector("input[name=ra]").value;
     const telefonealuno = document.querySelector(
@@ -110,7 +99,11 @@ document.addEventListener("DOMContentLoaded", function () {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        parceria,
+        profpix,
+        amigopix,
+        nomeprof,
+        telefoneprof,
+        emailprof,
         nomealuno,
         ra,
         telefonealuno,
