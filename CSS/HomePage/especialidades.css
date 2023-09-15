@@ -43,6 +43,12 @@
   text-align: left;
 }
 
+.cursos-up {
+  text-decoration: underline;
+  color: #16375c;
+  cursor: pointer;
+}
+
 @media (max-width: 801px) {
   h1 {
     font-size: 30px;
