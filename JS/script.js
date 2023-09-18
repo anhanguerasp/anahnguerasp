@@ -55,10 +55,6 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   const clearFields = () => {
-    document.querySelector("input[name=nomealuno]").value = "";
-    document.querySelector("input[name=ra]").value = "";
-    document.querySelector("input[name=telefonealuno]").value = "";
-    document.querySelector("input[name=emailaluno]").value = "";
     document.querySelector("input[name=nome]").value = "";
     document.querySelector("input[name=telefone]").value = "";
     document.querySelector("input[name=email]").value = "";
@@ -71,19 +67,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const handleSubmit = (event) => {
     event.preventDefault();
     addloading();
-    const amigopix = document.querySelector("input[name=amigopix]").value;
-    const profpix = document.querySelector("input[name=profpix]").value;
-    const nomeprof = document.querySelector("input[name=nomeprof]").value;
-    const telefoneprof = document.querySelector(
-      "input[name=telefoneprof]"
-    ).value;
-    const emailprof = document.querySelector("input[name=emailprof]").value;
-    const nomealuno = document.querySelector("input[name=nomealuno]").value;
-    const ra = document.querySelector("input[name=ra]").value;
-    const telefonealuno = document.querySelector(
-      "input[name=telefonealuno]"
-    ).value;
-    const emailaluno = document.querySelector("input[name=emailaluno]").value;
     const nome = document.querySelector("input[name=nome]").value;
     const telefone = document.querySelector("input[name=telefone]").value;
     const email = document.querySelector("input[name=email]").value;
@@ -99,15 +82,6 @@ document.addEventListener("DOMContentLoaded", function () {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        profpix,
-        amigopix,
-        nomeprof,
-        telefoneprof,
-        emailprof,
-        nomealuno,
-        ra,
-        telefonealuno,
-        emailaluno,
         nome,
         telefone,
         email,
@@ -115,6 +89,109 @@ document.addEventListener("DOMContentLoaded", function () {
         tipo,
         curso,
         polo,
+      }),
+    }).then(() => {
+      removeloading();
+      clearFields(); // Limpa os campos após o envio do formulário
+    });
+  };
+
+  document.querySelector("form").addEventListener("submit", handleSubmit);
+});
+
+// JS fomulario Amigo Vale Pix
+document.addEventListener("DOMContentLoaded", function () {
+  const button = document.querySelector(".botao-form");
+
+  const addloading = () => {
+    button.innerHTML =
+      '<img src="./img/loading_svgrepo.com.png" class="loading">';
+  };
+
+  const removeloading = () => {
+    button.innerHTML = "Inscreva-se";
+  };
+
+  const clearFields = () => {
+    document.querySelector("input[name=nomealuno]").value = "";
+    document.querySelector("input[name=ra]").value = "";
+    document.querySelector("input[name=telefonealuno]").value = "";
+    document.querySelector("input[name=emailaluno]").value = "";
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    addloading();
+    const parceria = document.querySelector("input[name=parceria]").value;
+    const nomealuno = document.querySelector("input[name=nomealuno]").value;
+    const ra = document.querySelector("input[name=ra]").value;
+    const telefonealuno = document.querySelector(
+      "input[name=telefonealuno]"
+    ).value;
+    const emailaluno = document.querySelector("input[name=emailaluno]").value;
+
+    fetch("https://api.sheetmonkey.io/form/uwnN9fSvLjroHLkpXPQsmk", {
+      method: "post",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        parceria,
+        nomealuno,
+        ra,
+        telefonealuno,
+        emailaluno,
+      }),
+    }).then(() => {
+      removeloading();
+      clearFields(); // Limpa os campos após o envio do formulário
+    });
+  };
+
+  document.querySelector("form").addEventListener("submit", handleSubmit);
+});
+
+// JS fomulario Amigo Vale Pix
+document.addEventListener("DOMContentLoaded", function () {
+  const button = document.querySelector(".botao-form");
+
+  const addloading = () => {
+    button.innerHTML =
+      '<img src="./img/loading_svgrepo.com.png" class="loading">';
+  };
+
+  const removeloading = () => {
+    button.innerHTML = "Inscreva-se";
+  };
+
+  const clearFields = () => {
+    document.querySelector("input[name=nomeprof]").value = "";
+    document.querySelector("input[name=telefoneprof]").value = "";
+    document.querySelector("input[name=emailprof]").value = "";
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    addloading();
+    const parceria = document.querySelector("input[name=parceria]").value;
+    const nomeprof = document.querySelector("input[name=nomeprof]").value;
+    const telefoneprof = document.querySelector(
+      "input[name=telefoneprof]"
+    ).value;
+    const emailprof = document.querySelector("input[name=emailprof]").value;
+
+    fetch("https://api.sheetmonkey.io/form/uwnN9fSvLjroHLkpXPQsmk", {
+      method: "post",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        parceria,
+        nomeprof,
+        telefoneprof,
+        emailprof,
       }),
     }).then(() => {
       removeloading();
