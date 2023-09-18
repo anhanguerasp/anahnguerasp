@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelector("form").addEventListener("submit", handleSubmit);
 });
 
-// JS fomulario Amigo Vale Pix
+// JS fomulario Professor Vale Pix
 document.addEventListener("DOMContentLoaded", function () {
   const button = document.querySelector(".botao-form");
 
@@ -196,6 +196,41 @@ document.addEventListener("DOMContentLoaded", function () {
     }).then(() => {
       removeloading();
       clearFields(); // Limpa os campos após o envio do formulário
+    });
+  };
+
+  document.querySelector("form").addEventListener("submit", handleSubmit);
+});
+
+// JS Formulario Domino's
+document.addEventListener("DOMContentLoaded", function () {
+  const button = document.querySelector(".botao-form");
+
+  const addloading = () => {
+    button.innerHTML =
+      '<img src="./img/loading_svgrepo.com.png" class="loading">';
+  };
+
+  const removeloading = () => {
+    button.innerHTML = "Inscreva-se";
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    addloading();
+    const parceria = document.querySelector("input[name=parceria]").value;
+
+    fetch("https://api.sheetmonkey.io/form/uwnN9fSvLjroHLkpXPQsmk", {
+      method: "post",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        parceria,
+      }),
+    }).then(() => {
+      removeloading();
     });
   };
 
