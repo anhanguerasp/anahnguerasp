@@ -1,9 +1,9 @@
 .titulo-pos {
-  color: #852287;
+  color: #16375c;
 }
 
 .cursos-alta-p {
-  background-color: #852287;
+  background-color: #16375c;
 }
 
 .cursos-alta-p h2 {
@@ -49,7 +49,7 @@
   height: 8px;
   width: 12px;
   margin-right: 8px;
-  background-color: #16375c;
+  background-color: #fdb913;
   transition: width 0.2s;
 }
 
