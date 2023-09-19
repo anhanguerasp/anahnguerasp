@@ -102,7 +102,7 @@
 
     <div class="carousel-inner">
       <div class="carousel-slide">
-        <img src="./img/AMIGO VALE PIX 1.png" alt="Imagem 1">
+        <img src="./img/LP APORT.png" alt="Imagem 1">
       </div>
       <div class="carousel-slide">
         <img src="./img/CURSOS NAS ÁREAS DA SAÚDE E ENGENHARIA.png" alt="Imagem 2">
@@ -121,14 +121,27 @@
     <button id="nextButton" class="carousel-button"><i class="fas fa-chevron-right"></i></button>
   </div>
 
-  <section class="amigopix">
-    <div class="intro-pix">
-      <img src="./img/chapeu-stick.svg" alt="logo stick">
-      <h1>ESTUDE GRÁTIS! PAGUE SUA MENSALIDADE INDICANDO UM AMIGO!</h1>
+  <section class="aport">
+    <div class="aport-container">
+      <div class="intro-G">
+        <img src="./img/aport-logo.svg" alt="logo stick">
+        <h1 class="titulo-pos">Colaborador APORT, venha transformar o seu futuro acadêmico!</h1>
+      </div>
+      <p>A Anhanguera SP disponibiliza uma ampla variedade de oportunidades acadêmicas, com mais de 100 cursos de graduação, mais de 500 cursos de pós-graduação e 9 cursos técnicos à sua disposição. Além disso, como colaborador, você pode contar com uma série de benefícios projetados para tornar o seu sonho acadêmico uma realidade. O nosso compromisso é com o seu sucesso acadêmico, e nossa equipe está dedicada a acompanhá-lo em toda a sua jornada. Oferecemos treinamento, orientações e estamos prontos para esclarecer todas as suas dúvidas, garantindo que você tenha todo o suporte necessário para alcançar seus objetivos acadêmicos. </p>
+      <h2>Para cursos de Graduação:</h2>
+      <img src="./img/desconto-g.png" alt="desconto graduação">
+      <div class="colum-aport">
+        <div>
+          <h2>Para cursos de Pós-Graduação e cursos técnicos:</h2>
+          <img src="./img/desconto-p.png" alt="desconto pós">
+        </div>
+        <div>
+          <h2>Os beneficcios ainda não acabaram! Ainda tem mais:</h2>
+          <img src="./img/desconto-cl.png" alt="Desconto cursos">
+        </div>
+      </div>
+      <p>Não precisa se preocupar com os horários! A secretária fica disponível para atendimento de segunda a sexta feira, das 8h às 22h e aos sábados das 8h às 17h. </p>
     </div>
-    <p>Veja como funciona:</p>
-    <img class="diagrama" src="./img/diagrama-amigopix.png" alt="como funciona">
-    <img class="diagrama-mobile" src="./img/diagrama-amigopix-mobile.png" alt="como funciona">
   </section>
 
 
@@ -172,28 +185,11 @@
 
       <section class="contato-formulario" aria-label="formulario">
         <form class="form">
-          <div>
-            <label for="amigo vale pix">Parceria</label>
-            <input type="text" id="amigo vale pix" name="parceria" value="Amigo Vale Pix" readonly>
+          <div class="col-2">
+            <label for="aport">Parceria</label>
+            <input type="text" id="aport" name="parceria" value="APORT" readonly>
           </div>
-          <h2 class="col-1">Quem te indicou?</h2>
-          <div>
-            <label for="nome">Nome</label>
-            <input type="text" id="nome" name="nomealuno" placeholder="Nome" required>
-          </div>
-          <div>
-            <label for="ra">R.A.</label>
-            <input type="text" id="ra" name="ra" placeholder="R.A." required>
-          </div>
-          <div>
-            <label for="telefone do aluno">Telefone</label>
-            <input type="tel" id="telefone do aluno" name="telefonealuno" placeholder="(11)99999-9999" onkeyup="handlePhone(event)" maxlength="15" required>
-          </div>
-          <div>
-            <label for="email do aluno">Email</label>
-            <input type="email" id="email do aluno" name="emailaluno" placeholder="contato@email.com.br" autocomplete="on" required>
-          </div>
-          <h2 class="col-1">Agora preencha seus dados:</h2>
+
           <div>
             <label for="nome">Nome</label>
             <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
