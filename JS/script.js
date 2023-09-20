@@ -239,6 +239,23 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelector("form").addEventListener("submit", handleSubmit);
 });
 
+// Função para obter a data atual no formato "dd/mm/yyyy"
+function getDataAtual() {
+  const data = new Date();
+  const dia = String(data.getDate()).padStart(2, "0");
+  const mes = String(data.getMonth() + 1).padStart(2, "0"); // Mês é base 0
+  const ano = data.getFullYear();
+  return `${dia}/${mes}/${ano}`;
+}
+
+// Preenche o campo "data" com a data atual quando a página carrega
+window.addEventListener("load", function () {
+  const campoData = document.getElementById("data");
+  if (campoData) {
+    campoData.value = getDataAtual();
+  }
+});
+
 // Alerta de página em construção
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -291,21 +308,4 @@ document.addEventListener("DOMContentLoaded", function () {
   links.forEach((link) => {
     link.addEventListener("click", mostrarAlerta);
   });
-});
-
-// Função para obter a data atual no formato "dd/mm/yyyy"
-function getDataAtual() {
-  const data = new Date();
-  const dia = String(data.getDate()).padStart(2, "0");
-  const mes = String(data.getMonth() + 1).padStart(2, "0"); // Mês é base 0
-  const ano = data.getFullYear();
-  return `${dia}/${mes}/${ano}`;
-}
-
-// Preenche o campo "data" com a data atual quando a página carrega
-window.addEventListener("load", function () {
-  const campoData = document.getElementById("data");
-  if (campoData) {
-    campoData.value = getDataAtual();
-  }
 });
