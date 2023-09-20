@@ -23,6 +23,10 @@ h1 {
   margin-left: 80px;
 }
 
+.catalogo {
+  background-color: #2e2e2e;
+}
+
 .catalogo img {
   max-width: 100%;
   transition: transform 0.2s ease-in-out; /* Adiciona uma transição suave */
