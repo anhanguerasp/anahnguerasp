@@ -22,6 +22,9 @@ h1 {
   text-align: start;
   margin-left: 80px;
 }
+.nao-visivel {
+  display: none;
+}
 
 .se-inscreva img {
   width: 100%;
