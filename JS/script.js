@@ -33,6 +33,41 @@ document.addEventListener("DOMContentLoaded", function () {
   prevButton.addEventListener("click", prevSlide);
 });
 
+//JS Carrossel 2
+document.addEventListener("DOMContentLoaded", function () {
+  const carouselInner = document.querySelector(".carousel-inner2");
+  const slides = document.querySelectorAll(".carousel-slide2");
+  let currentSlide = 0;
+
+  function showSlide(slideIndex) {
+    slides.forEach((slide, index) => {
+      if (index === slideIndex) {
+        slide.style.display = "block";
+      } else {
+        slide.style.display = "none";
+      }
+    });
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  setInterval(nextSlide, 5000); // Troca de imagem a cada 5 segundos
+
+  const nextButton = document.getElementById("nextButton2");
+  const prevButton = document.getElementById("prevButton2");
+
+  nextButton.addEventListener("click", nextSlide);
+  prevButton.addEventListener("click", prevSlide);
+});
+
 //JS Menu Hamburguer
 function menuOnClick() {
   document.getElementById("menu-bar").classList.toggle("change");
