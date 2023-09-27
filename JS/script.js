@@ -79,6 +79,10 @@ function menuOnClick() {
 
 document.addEventListener("DOMContentLoaded", function () {
   const button = document.querySelector(".botao-form");
+  const showSuccessMessage = () => {
+    mensagem.innerText = "Formulário enviado! Obrigado por sua inscrição!";
+    mensagem.style.display = "block";
+  };
 
   const addloading = () => {
     button.innerHTML =
@@ -130,6 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }).then(() => {
       removeloading();
       clearFields(); // Limpa os campos após o envio do formulário
+      showSuccessMessage();
     });
   };
 
