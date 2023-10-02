@@ -71,5 +71,6 @@
   }
   .NPA img {
     max-width: 100%; /* A imagem deve ocupar 100% da largura em telas menores */
+    order: 2;
   }
 }
