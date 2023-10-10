@@ -115,6 +115,10 @@
   color: #232323;
 }
 
+.sobre-acirc {
+  display: grid;
+}
+
 @media (max-width: 801px) {
   .acirc {
     background-image: url(../../img/bg-acirc2.png);
