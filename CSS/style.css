@@ -4,6 +4,7 @@
 @import url("./header.css");
 @import url("./formulario.css");
 @import url("./footer.css");
+@import url("./Termos/termosepolitica.css");
 
 /* Estilos Home */
 @import url("./HomePage/carrossel.css");

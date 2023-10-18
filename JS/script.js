@@ -335,20 +335,20 @@ window.addEventListener("load", function () {
 //   });
 // });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const links = document.querySelectorAll(".footer-informacoes li a");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const links = document.querySelectorAll(".footer-informacoes li a");
 
-  function mostrarAlerta(event) {
-    if (!event.target.classList.contains("excluir-alerta")) {
-      event.preventDefault();
-      alert("Desculpe o transtorno, essa página ainda está em construção");
-    }
-  }
+//   function mostrarAlerta(event) {
+//     if (!event.target.classList.contains("excluir-alerta")) {
+//       event.preventDefault();
+//       alert("Desculpe o transtorno, essa página ainda está em construção");
+//     }
+//   }
 
-  links.forEach((link) => {
-    link.addEventListener("click", mostrarAlerta);
-  });
-});
+//   links.forEach((link) => {
+//     link.addEventListener("click", mostrarAlerta);
+//   });
+// });
 
 // Unidades JS
 
