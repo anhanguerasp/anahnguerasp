@@ -75,7 +75,7 @@ function menuOnClick() {
   document.getElementById("menu-bg").classList.toggle("change-bg");
 }
 
-// JS formulário
+// JS formulário Padrão
 
 document.addEventListener("DOMContentLoaded", function () {
   const button = document.querySelector(".botao-form");
@@ -1040,3 +1040,121 @@ function scrollDown() {
     behavior: "smooth", // Essa opção faz a rolagem ser suave
   });
 }
+
+// JS formulário Unegro - afiliados
+
+document.addEventListener("DOMContentLoaded", function () {
+  const button = document.querySelector(".botao-form");
+  const showSuccessMessage = () => {
+    mensagem.innerText = "Formulário enviado! Obrigado por sua inscrição!";
+    mensagem.style.display = "block";
+  };
+
+  const addloading = () => {
+    button.innerHTML =
+      '<img src="./img/loading_svgrepo.com.png" class="loading">';
+  };
+
+  const removeloading = () => {
+    button.innerHTML = "Inscreva-se";
+  };
+
+  const clearFields = () => {
+    document.querySelector("input[name=datas]").value = "";
+    document.querySelector("input[name=NomeAfiliado]").value = "";
+    document.querySelector("input[name=CEP]").value = "";
+    document.querySelector("input[name=endereco]").value = "";
+    document.querySelector("input[name=numero]").value = "";
+    document.querySelector("input[name=complemento]").value = "";
+    document.querySelector("input[name=bairro]").value = "";
+    document.querySelector("input[name=cidade]").value = "";
+    document.querySelector("input[name=uf]").value = "";
+    document.querySelector("input[name=residencial]").value = "";
+    document.querySelector("input[name=comercial]").value = "";
+    document.querySelector("input[name=celular]").value = "";
+    document.querySelector("input[name=nascimento]").value = "";
+    document.querySelector("input[name=rg]").value = "";
+    document.querySelector("input[name=cpf]").value = "";
+    document.querySelector("select[name=sexo]").value = "";
+    document.querySelector("input[name=emailafiliado]").value = "";
+    document.querySelector("input[name=municipio]").value = "";
+    document.querySelector("input[name=ufm]").value = "";
+    document.querySelector("select[name=escolaridade]").value = "";
+    document.querySelector("input[name=ocupacao]").value = "";
+    document.querySelector("select[name=movimento]").value = "";
+    document.querySelector("input[name=valor]").value = "";
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    addloading();
+    const datas = document.querySelector("input[name=datas]").value;
+    const NomeAfiliado = document.querySelector(
+      "input[name=NomeAfiliado]"
+    ).value;
+    const CEP = document.querySelector("input[name=CEP]").value;
+    const endereco = document.querySelector("input[name=endereco]").value;
+    const numero = document.querySelector("input[name=numero]").value;
+    const complemento = document.querySelector("input[name=complemento]").value;
+    const bairro = document.querySelector("input[name=bairro]").value;
+    const cidade = document.querySelector("input[name=cidade]").value;
+    const uf = document.querySelector("input[name=uf]").value;
+    const residencial = document.querySelector("input[name=residencial]").value;
+    const comercial = document.querySelector("input[name=comercial]").value;
+    const celular = document.querySelector("input[name=celular]").value;
+    const nascimento = document.querySelector("input[name=nascimento]").value;
+    const rg = document.querySelector("input[name=rg]").value;
+    const cpf = document.querySelector("input[name=cpf]").value;
+    const sexo = document.querySelector("select[name=sexo]").value;
+    const emailafiliado = document.querySelector(
+      "input[name=emailafiliado]"
+    ).value;
+    const municipio = document.querySelector("input[name=municipio]").value;
+    const ufm = document.querySelector("input[name=ufm]").value;
+    const escolaridade = document.querySelector(
+      "select[name=escolaridade]"
+    ).value;
+    const ocupacao = document.querySelector("input[name=ocupacao]").value;
+    const movimento = document.querySelector("select[name=movimento]").value;
+    const valor = document.querySelector("input[name=valor]").value;
+
+    fetch("https://api.sheetmonkey.io/form/uyvgqX1ZoBoyAcF56h2ygN", {
+      method: "post",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        datas,
+        NomeAfiliado,
+        CEP,
+        endereco,
+        numero,
+        complemento,
+        bairro,
+        cidade,
+        uf,
+        residencial,
+        comercial,
+        celular,
+        nascimento,
+        rg,
+        cpf,
+        sexo,
+        emailafiliado,
+        municipio,
+        ufm,
+        escolaridade,
+        ocupacao,
+        movimento,
+        valor,
+      }),
+    }).then(() => {
+      removeloading();
+      clearFields(); // Limpa os campos após o envio do formulário
+      showSuccessMessage();
+    });
+  };
+
+  document.querySelector("form").addEventListener("submit", handleSubmit);
+});
