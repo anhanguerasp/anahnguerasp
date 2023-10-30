@@ -74,22 +74,22 @@ function menuOnClick() {
   document.getElementById("nav").classList.toggle("change");
   document.getElementById("menu-bg").classList.toggle("change-bg");
 }
-
-// JS formulário Padrão
-
+// JS Formulário Padrão
 document.addEventListener("DOMContentLoaded", function () {
   const button = document.querySelector(".botao-form");
+  const mensagem = document.getElementById("mensagem");
+
   const showSuccessMessage = () => {
     mensagem.innerText = "Formulário enviado! Obrigado por sua inscrição!";
     mensagem.style.display = "block";
   };
 
-  const addloading = () => {
+  const addLoading = () => {
     button.innerHTML =
       '<img src="./img/loading_svgrepo.com.png" class="loading">';
   };
 
-  const removeloading = () => {
+  const removeLoading = () => {
     button.innerHTML = "Inscreva-se";
   };
 
@@ -99,20 +99,87 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("input[name=email]").value = "";
     document.querySelector("select[name=modalidade]").value = "";
     document.querySelector("select[name=tipo]").value = "";
-    document.querySelector("input[name=curso]").value = "";
+    document.querySelector("select[name=curso-graduacao]").value = "";
+    document.querySelector("select[name=curso-tecnicos]").value = "";
+    document.querySelector("input[name=curso-manual]").value = "";
     document.querySelector("select[name=polo]").value = "";
   };
 
+  const handleTipoCursoChange = () => {
+    const tipoCursoSelect = document.querySelector('select[name="tipo"]');
+    const cursoContainer = document.getElementById("curso-container");
+    const cursoGraduacaoSelect = document.querySelector(
+      'select[name="curso-graduacao"]'
+    );
+    const cursoTecnicosSelect = document.querySelector(
+      'select[name="curso-tecnicos"]'
+    );
+    const cursoManualInput = document.querySelector(
+      'input[name="curso-manual"]'
+    );
+
+    tipoCursoSelect.addEventListener("change", function () {
+      const selectedOption = tipoCursoSelect.value;
+
+      if (selectedOption === "Graduação") {
+        cursoContainer.style.display = "block";
+        cursoGraduacaoSelect.style.display = "block";
+        cursoTecnicosSelect.style.display = "none";
+        cursoManualInput.style.display = "none";
+        cursoTecnicosSelect.removeAttribute("required"); // Remover atributo required
+        cursoGraduacaoSelect.setAttribute("required", "required"); // Adicionar required
+      } else if (selectedOption === "Cursos Técnicos") {
+        cursoContainer.style.display = "block";
+        cursoGraduacaoSelect.style.display = "none";
+        cursoTecnicosSelect.style.display = "block";
+        cursoManualInput.style.display = "none";
+        cursoGraduacaoSelect.removeAttribute("required"); // Remover atributo required
+        cursoTecnicosSelect.setAttribute("required", "required"); // Adicionar required
+      } else if (
+        selectedOption === "Cursos Livres" ||
+        selectedOption === "Pós-graduação"
+      ) {
+        cursoContainer.style.display = "block";
+        cursoGraduacaoSelect.style.display = "none";
+        cursoTecnicosSelect.style.display = "none";
+        cursoManualInput.style.display = "block";
+        cursoGraduacaoSelect.removeAttribute("required"); // Remover atributo required
+        cursoTecnicosSelect.removeAttribute("required"); // Remover atributo required
+      } else {
+        cursoContainer.style.display = "none";
+        cursoGraduacaoSelect.value = "";
+        cursoTecnicosSelect.value = "";
+        cursoManualInput.value = "";
+        cursoGraduacaoSelect.removeAttribute("required"); // Remover atributo required
+        cursoTecnicosSelect.removeAttribute("required"); // Remover atributo required
+      }
+    });
+  };
+
+  handleTipoCursoChange();
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    addloading();
+    addLoading();
     const data = document.querySelector("input[name=data]").value;
     const nome = document.querySelector("input[name=nome]").value;
     const telefone = document.querySelector("input[name=telefone]").value;
     const email = document.querySelector("input[name=email]").value;
     const modalidade = document.querySelector("select[name=modalidade]").value;
     const tipo = document.querySelector("select[name=tipo]").value;
-    const curso = document.querySelector("input[name=curso]").value;
+    const cursoGraduacao = document.querySelector(
+      "select[name=curso-graduacao]"
+    ).value;
+    const cursoTecnicos = document.querySelector(
+      "select[name=curso-tecnicos]"
+    ).value;
+    const cursoManualInput = document.querySelector("input[name=curso-manual]");
+    const curso =
+      tipo === "Graduação"
+        ? cursoGraduacao
+        : tipo === "Cursos Técnicos"
+        ? cursoTecnicos
+        : cursoManualInput.value;
     const polo = document.querySelector("select[name=polo]").value;
 
     fetch("https://api.sheetmonkey.io/form/uwnN9fSvLjroHLkpXPQsmk", {
@@ -132,8 +199,8 @@ document.addEventListener("DOMContentLoaded", function () {
         polo,
       }),
     }).then(() => {
-      removeloading();
-      clearFields(); // Limpa os campos após o envio do formulário
+      removeLoading();
+      clearFields();
       showSuccessMessage();
     });
   };
