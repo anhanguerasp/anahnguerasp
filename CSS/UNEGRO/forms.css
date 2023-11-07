@@ -1,3 +1,8 @@
+.titulo-cadastro {
+  color: #000000;
+  font: 600 3rem/1.125 "Poppins", sans-serif;
+}
+
 #contato {
   background: linear-gradient(#111111 600px, #f7f7f7 0px);
 }
