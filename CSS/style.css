@@ -46,3 +46,10 @@
 
 /* Estilo Sobre Nós */
 @import url("./SobreNos/sobre.css");
+
+/* Estilo Unegro Afiliados */
+@import url("./UNEGRO/header.css");
+@import url("./UNEGRO/intro.css");
+@import url("./UNEGRO/sobre.css");
+@import url("./UNEGRO/proposito.css");
+@import url("./UNEGRO/forms.css");
