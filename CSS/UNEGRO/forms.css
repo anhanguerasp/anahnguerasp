@@ -86,3 +86,21 @@
     margin-bottom: 12px;
   }
 }
+
+@media (max-width: 400px) {
+  .titulo-cadastro {
+    font: 600 2.5rem/1.125 "Poppins", sans-serif;
+  }
+  .contato-dados img {
+    width: 200px;
+  }
+  .contato-redes img {
+    width: 40px;
+  }
+  .contato-redes {
+    margin-top: 30px;
+  }
+  .form {
+    grid-template-columns: 1fr;
+  }
+}

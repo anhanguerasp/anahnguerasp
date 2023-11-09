@@ -70,4 +70,11 @@
   .introducao-unegro img {
     display: none;
   }
+  .titulo1-unegro {
+    font-size: 2.5rem;
+  }
+  .p-unegro {
+    color: #b2b2b2;
+    font: 400 1.3rem/1.5 "Roboto", sans-serif;
+  }
 }

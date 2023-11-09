@@ -16,3 +16,12 @@
   text-transform: uppercase;
   margin-bottom: 30px;
 }
+
+@media (max-width: 400px) {
+  .footer-unegro img {
+    width: 200px;
+  }
+  .footer-redes img {
+    width: 40px;
+  }
+}

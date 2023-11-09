@@ -93,4 +93,20 @@ h6 {
   .proposito-vantagens {
     flex-direction: column;
   }
+  .proposito-conteudo {
+    padding-top: 10px;
+    padding-bottom: 0;
+  }
+  .proposito-conteudo h2 {
+    font: 600 2.5rem/1.125 "Poppins", sans-serif;
+  }
+  .proposito-vantagens ul {
+    font-size: 20px;
+    text-align: start;
+    margin: 20px 40px;
+  }
+  .proposito {
+    box-shadow: none;
+    margin: 0px 10px;
+  }
 }
