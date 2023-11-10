@@ -93,13 +93,35 @@
 @media (max-width: 600px) {
   .quadrado {
     flex-direction: column;
-    height: auto;
+    background: linear-gradient(to bottom, #325e75 50%, #ededed 50%);
   }
 
   .metade-esquerda,
   .metade-direita {
-    width: 100%;
-    padding: 15px;
-    text-align: center;
+    flex: 1;
+  }
+
+  .curso-prefeitura {
+    padding: 10px;
+  }
+  .curso-prefeitura h1 {
+    font-size: 34px;
+  }
+
+  .curso-prefeitura p {
+    font-size: 24px;
+  }
+
+  .botao-desconto {
+    font-size: 30px;
+  }
+  .titulo2-prefeitura {
+    font-size: 34px;
+    margin-top: 20px;
+  }
+  .p2-prefeitura,
+  .lista-prefeitura,
+  .sublista-prefeitura {
+    font-size: 24px;
   }
 }

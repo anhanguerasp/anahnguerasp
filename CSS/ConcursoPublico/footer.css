@@ -23,3 +23,13 @@
   font-style: normal;
   font-size: 30px;
 }
+
+@media (max-width: 600px) {
+  .footer-prefeitura img {
+    width: 100px;
+  }
+  .footer-prefeitura p,
+  .footer-prefeitura li {
+    font-size: 24px;
+  }
+}

@@ -1257,7 +1257,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const handleSubmit = (event) => {
     event.preventDefault();
     addloading();
-    const data = document.querySelector("input[name=datas]").value;
+    const data = document.querySelector("input[name=data]").value;
     const nomeconcurso = document.querySelector(
       "input[name=nomeconcurso]"
     ).value;

@@ -33,3 +33,18 @@
   text-decoration: underline;
   color: #c82525;
 }
+
+@media (max-width: 600px) {
+  .edital h1 {
+    font-size: 30px;
+  }
+
+  .p2-prefeitura span,
+  .p2-prefeitura a {
+    font-size: 24px;
+  }
+
+  .p2-prefeitura {
+    padding: 10px;
+  }
+}
