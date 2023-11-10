@@ -1127,7 +1127,7 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   const clearFields = () => {
-    document.querySelector("input[name=datas]").value = "";
+    document.querySelector("input[name=data]").value = "";
     document.querySelector("input[name=NomeAfiliado]").value = "";
     document.querySelector("input[name=CEP]").value = "";
     document.querySelector("input[name=endereco]").value = "";
@@ -1155,7 +1155,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const handleSubmit = (event) => {
     event.preventDefault();
     addloading();
-    const datas = document.querySelector("input[name=datas]").value;
+    const data = document.querySelector("input[name=data]").value;
     const NomeAfiliado = document.querySelector(
       "input[name=NomeAfiliado]"
     ).value;
@@ -1192,7 +1192,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        datas,
+        data,
         NomeAfiliado,
         CEP,
         endereco,
@@ -1219,6 +1219,80 @@ document.addEventListener("DOMContentLoaded", function () {
     }).then(() => {
       removeloading();
       clearFields(); // Limpa os campos após o envio do formulário
+      showSuccessMessage();
+    });
+  };
+
+  document.querySelector("form").addEventListener("submit", handleSubmit);
+});
+
+// JS formulário  Concurso Público
+
+document.addEventListener("DOMContentLoaded", function () {
+  const button = document.querySelector(".botao-form");
+  const showSuccessMessage = () => {
+    mensagem.innerText = "Formulário enviado! Obrigado por sua inscrição!";
+    mensagem.style.display = "block";
+  };
+
+  const addloading = () => {
+    button.innerHTML =
+      '<img src="./img/loading_svgrepo.com.png" class="loading">';
+  };
+
+  const removeloading = () => {
+    button.innerHTML = "Inscreva-se";
+  };
+
+  const clearFields = () => {
+    document.querySelector("input[name=data]").value = "";
+    document.querySelector("input[name=nomeconcurso]").value = "";
+    document.querySelector("input[name=telefoneconcurso]").value = "";
+    document.querySelector("input[name=emailconcurso]").value = "";
+    document.querySelector("select[name=cursoconcurso]").value = "";
+    document.querySelector("select[name=datacurso]").value = "";
+    document.querySelector("select[name=localconcurso]").value = "";
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    addloading();
+    const data = document.querySelector("input[name=datas]").value;
+    const nomeconcurso = document.querySelector(
+      "input[name=nomeconcurso]"
+    ).value;
+    const telefoneconcurso = document.querySelector(
+      "input[name=telefoneconcurso]"
+    ).value;
+    const emailconcurso = document.querySelector(
+      "input[name=emailconcurso]"
+    ).value;
+    const cursoconcurso = document.querySelector(
+      "select[name=cursoconcurso]"
+    ).value;
+    const datacurso = document.querySelector("select[name=datacurso]").value;
+    const localconcurso = document.querySelector(
+      "select[name=localconcurso]"
+    ).value;
+
+    fetch("https://api.sheetmonkey.io/form/2fVEfg6Aed4GxgANxLppGS", {
+      method: "post",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        data,
+        nomeconcurso,
+        telefoneconcurso,
+        emailconcurso,
+        cursoconcurso,
+        datacurso,
+        localconcurso,
+      }),
+    }).then(() => {
+      removeloading();
+      clearFields();
       showSuccessMessage();
     });
   };

@@ -1,0 +1,35 @@
+.edital {
+  background-color: #325e75;
+  padding: 30px;
+}
+
+.edital h1 {
+  font-family: "apotek", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 64px;
+  margin-bottom: 40px;
+}
+
+.edital img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.p2-prefeitura span {
+  font-family: "eigerdals", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 32px;
+}
+
+.p2-prefeitura a {
+  font-family: "eigerdals", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 32px;
+  text-decoration: underline;
+  color: #c82525;
+}
