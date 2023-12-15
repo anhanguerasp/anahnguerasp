@@ -61,9 +61,12 @@
   }
 
   .carousel-slide {
-    width: 375px; /* Largura de cada slide */
-    height: 105.47px;
-    display: inline-block; /* Exibe os slides em linha */
+  width: 20%; /* Cada slide ocupa 20% da largura do contêiner (5 slides no total) */
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: -3px;
+  justify-content: center;
   }
 
   .carousel img {
