@@ -40,6 +40,7 @@
   overflow: hidden;
   position: relative;
   margin-bottom: -3px;
+  justify-content: center;
 }
 
 .carousel img {
