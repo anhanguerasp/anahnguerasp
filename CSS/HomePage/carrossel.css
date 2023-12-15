@@ -141,7 +141,7 @@
   }
 
   .carousel-inner2 {
-    display: block;
+    display: flex;
     transition: transform 1s ease-in-out;
     white-space: nowrap; /* Impede que os slides quebrem para a próxima linha */
   }
@@ -149,7 +149,7 @@
   .carousel-slide2 {
     width: 375px; /* Largura de cada slide */
     height: 105.47px;
-    display: inline-block; /* Exibe os slides em linha */
+    display: flex; /* Exibe os slides em linha */
   }
 
   .carousel2 img {
