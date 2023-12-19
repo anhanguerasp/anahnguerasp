@@ -13,7 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
-
+  showSlide(currentSlide);
+  
   function nextSlide() {
     currentSlide = (currentSlide + 1) % slides.length;
     showSlide(currentSlide);
