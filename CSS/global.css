@@ -28,6 +28,7 @@ h1 {
 
 .se-inscreva img {
   width: 100%;
+  max-width: 100vw;
 }
 
 .se-inscreva {
