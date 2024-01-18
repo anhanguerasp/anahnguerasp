@@ -226,6 +226,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("input[name=ra]").value = "";
     document.querySelector("input[name=telefonealuno]").value = "";
     document.querySelector("input[name=emailaluno]").value = "";
+    document.querySelector("input[name=pixaluno").value = "";
   };
 
   const handleSubmit = (event) => {
@@ -251,6 +252,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ra,
         telefonealuno,
         emailaluno,
+        pixaluno,
       }),
     }).then(() => {
       removeloading();
