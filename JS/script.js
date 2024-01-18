@@ -239,6 +239,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "input[name=telefonealuno]"
     ).value;
     const emailaluno = document.querySelector("input[name=emailaluno]").value;
+    const pixaluno = document.querySelector("input[name=pixaluno]").value;
 
     fetch("https://api.sheetmonkey.io/form/uwnN9fSvLjroHLkpXPQsmk", {
       method: "post",
