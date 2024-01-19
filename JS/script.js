@@ -208,7 +208,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelector("form").addEventListener("submit", handleSubmit);
 });
 
-// JS fomulario Amigo Vale Pix
+// JS form Amigo Vale Pix
 document.addEventListener("DOMContentLoaded", function () {
   const button = document.querySelector(".botao-form");
 
@@ -264,7 +264,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelector("form").addEventListener("submit", handleSubmit);
 });
 
-// JS fomulario Professor Vale Pix
+// JS form Professor Vale Pix
 document.addEventListener("DOMContentLoaded", function () {
   const button = document.querySelector(".botao-form");
 
